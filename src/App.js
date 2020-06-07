@@ -16,8 +16,8 @@ class App extends Component {
   repo = this.title.substr(0, this.separator);
   file = this.title.substr(this.separator+1);
 
-  past = "https://raw.githubusercontent.com/" + this.repo + "/v1.2/" + this.file;
-  current = "https://raw.githubusercontent.com/" + this.repo + "/master/" + this.file;
+  past = "http://localhost:8080/files/originals/" + this.repo + "/" + this.file;
+  current = "http://localhost:8080/files/rewritten/" + this.repo + "/" + this.file;
 
   componentDidMount() {
     fetch(this.past)
