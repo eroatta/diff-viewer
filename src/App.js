@@ -3,6 +3,8 @@ import { ReactGhLikeDiff } from "react-gh-like-diff";
 import fetch from "unfetch";
 import "react-gh-like-diff/dist/css/diff2html.min.css";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 class App extends Component {
   state = {
     past: "",
@@ -16,8 +18,8 @@ class App extends Component {
   repo = this.title.substr(0, this.separator);
   file = this.title.substr(this.separator+1);
 
-  past = "http://localhost:8080/files/originals/" + this.repo + "/" + this.file;
-  current = "http://localhost:8080/files/rewritten/" + this.repo + "/" + this.file;
+  past = API_URL + "/files/originals/" + this.repo + "/" + this.file;
+  current = API_URL + "/files/rewritten/" + this.repo + "/" + this.file;
 
   componentDidMount() {
     fetch(this.past)
