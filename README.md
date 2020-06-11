@@ -4,11 +4,14 @@
 
 ## Usage
 
-_TBD_
+Open a new browser window or tab, and enter the URL: _http://address:port_*/differences/$owner/$repository/$filename*
+
+Example:
+- http://localhost:5000/differences/src-d/go-queue/job.go
 
 ## Screenshots
 
-_TBD_
+![Screenshot](./img/diff_viewer.png)
 
 ## Inspiration
 

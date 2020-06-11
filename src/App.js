@@ -12,7 +12,7 @@ class App extends Component {
   };
 
   url = window.location.pathname;
-  title = this.url.replace("/rewrites/", "");
+  title = this.url.replace("/differences/", "");
 
   separator = this.title.indexOf("/", this.title.indexOf("/")+1);
   repo = this.title.substr(0, this.separator);
